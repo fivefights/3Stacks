@@ -1,21 +1,38 @@
-<h1 class="uk-text-center">Have Some Breakfast</h1>
-
+<img src="/assets/images/" alt="">
+<h1 class="uk-text-center">3 Stacks</h1>
 <hr class="uk-divider-icon">
 
+{{!-- form div --}}
 <div class="uk-text-center">
-    {{!-- <iframe src="https://giphy.com/embed/3oKIPbhmYk6Y9vQlmE" width="480" height="386" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/deadsetonlife-matty-mathesson-3oKIPbhmYk6Y9vQlmE">via GIPHY</a></p> --}}
+{{!-- <iframe src="https://giphy.com/embed/3oKIPbhmYk6Y9vQlmE" width="480" height="386" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/deadsetonlife-matty-mathesson-3oKIPbhmYk6Y9vQlmE">via GIPHY</a></p> --}}
 
-    <div>
-        <p>Add a breakfast dish to the menu:</p>
-        {{!-- input here --}}
-        <form>
-            <fieldset class="uk-fieldset">
-                <div>
-                    <input class="uk-input uk-form-width-large uk-form-medium" type="text">
-                </div>
-            </fieldset>
-        </form>
-        <button class="uk-button uk-button-default"><span uk-icon="plus"></span> add dish</button>
+    <p class="uk-text-lead">add a breakfast dish to the menu:</p>
+    <form class="uk-width-1-3@m uk-align-center">
+        <fieldset class="uk-fieldset">
+            <div>
+                <input class="uk-input" type="text">
+            </div>
+        </fieldset>
+    </form>
+    <button class="uk-button uk-button-default"><span uk-icon="plus"></span> add dish</button>
+</div>
+
+<div class="uk-grid-small" uk-grid>
+    {{!-- menu div - left side --}}
+    <div class="menuCard uk-card uk-card-default uk-card-body uk-width-1-2@m">
+        <h3 class="uk-card-title">Menu</h3>
+        <hr>
+        <ol>
+            <li>farmhouse omelette</li>
+            <li>3 stacks</li>
+        </ol>
+    </div>
+
+    {{!-- eaten div - right side --}}
+    <div class="devouredCard uk-card uk-card-default uk-card-body uk-width-1-2@m">
+        <h3 class="uk-card-title">Devoured</h3>
+        <hr>
+        <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
 </div>
  
