@@ -24,7 +24,7 @@ app.set('view engine', 'handlebars');
 // import routes and give server access
 var routes = require('./controllers/stacks-controller.js');
 
-app.use('/', routes);
+app.use(routes);
 
 app.listen(PORT, function(){
     console.log('server listening on http://localhost:' + PORT);
