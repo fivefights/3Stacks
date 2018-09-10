@@ -1,4 +1,4 @@
-// declaring dependencies
+// dependencies
 var express = require('express');
 var bodyParser = require('body-parser');
 
@@ -26,7 +26,7 @@ var connection = mysql.createConnection({
   port: 3306,
   user: "root",
   password: "root",
-  database: "quotes_db"
+  database: "stacks_db"
 });
 
 // establishing connection

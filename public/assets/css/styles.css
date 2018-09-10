@@ -64,4 +64,15 @@ img {
     background-color: #E8853D;
     color: white;
 }
+/* MENU ITEMS ****************************************/
+.menuCard li {
+    border: 1px solid #d9d9d9;
+    border-style: dotted;
+    border-width: 0.5px;
+    padding: 7px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #195f3f;
+    font-family: 'Kosugi Maru', sans-serif;
+}
 
