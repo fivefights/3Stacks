@@ -8,12 +8,11 @@ var connection;
 //     connection = mysql.createConnection(process.env.JAWSDB_URL);
 // } else {
     connection = mysql.createConnection({
-        host: "localhost",
+        host: "127.0.0.1",
         port: 3306,
         user: "root",
         password: "root",
         database: "stacks_db",
-        socketPath: "/var/run/mysqld/mysqld.sock"
     });
 // }
   
