@@ -34,11 +34,13 @@ img {
 }
 .uk-button-default {
     margin-bottom: 30px;
-}
-.uk-button-default:hover {
     color: white;
     background-color: #144b32;
     border: 1px solid #144b32;
+}
+.uk-button-default:hover {
+    background-color: #44ce8e;
+    border-color: #144b32;
 }
 /* FORM *********************************************/
 .uk-input {
@@ -65,14 +67,18 @@ img {
     color: white;
 }
 /* MENU ITEMS ****************************************/
-.menuCard li {
-    border: 1px solid #d9d9d9;
+.menuCard li, .devouredCard li {
+    border: 1px solid #44ce8e;
     border-style: dotted;
     border-width: 0.5px;
-    padding: 7px;
-    margin-bottom: 10px;
     border-radius: 4px;
     background-color: #195f3f;
+    padding: 7px;
+    margin-bottom: 10px;
     font-family: 'Kosugi Maru', sans-serif;
+}
+.devouredCard li {
+    border: 1px solid #f5b97c;
+    background-color: #f19f4d;
 }
 
