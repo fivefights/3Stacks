@@ -1,5 +1,5 @@
 {
-  "name": "burger",
+  "name": "stacks",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/1661SONS/burger.git"
+    "url": "git+https://github.com/1661SONS/3Stacks.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/1661SONS/burger/issues"
+    "url": "https://github.com/1661SONS/3Stacks/issues"
   },
-  "homepage": "https://github.com/1661SONS/burger#readme",
+  "homepage": "https://github.com/1661SONS/3Stacks#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
