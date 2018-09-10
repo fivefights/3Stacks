@@ -4,10 +4,8 @@
 
 {{!-- form div --}}
 <div class="uk-text-center">
-{{!-- <iframe src="https://giphy.com/embed/3oKIPbhmYk6Y9vQlmE" width="480" height="386" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/deadsetonlife-matty-mathesson-3oKIPbhmYk6Y9vQlmE">via GIPHY</a></p> --}}
-
     <p class="uk-text-lead">add a pancake dish to the menu:</p>
-    <form class="uk-width-1-3@m uk-align-center" action="/stacks" method="POST">
+    <form class="uk-width-1-2@m uk-align-center" action="/stacks" method="POST">
         <fieldset class="uk-fieldset">
             <div>
                 <input class="uk-input" type="text" id="name" name="stacks_name">
@@ -18,7 +16,8 @@
 </div>
 
 <div class="uk-grid-small uk-child-width-expand@s" uk-grid>
-    {{!-- menu div - left side --}}
+    
+    {{!-- menu card - left side --}}
     <div class="menuCard uk-card uk-card-body uk-width-1-2@m">
         <h3 class="uk-card-title"><span uk-icon="tag"></span> Menu</h3>
         <p class="uk-text-center">click the <span uk-icon="bolt"></span> to devour</p>
@@ -32,7 +31,7 @@
         </ol>
     </div>
 
-    {{!-- devoured div - right side --}}
+    {{!-- devoured card - right side --}}
     <div class="devouredCard uk-card uk-card-body uk-width-1-2@m">
         <h3 class="uk-card-title"><span uk-icon="bolt"></span> Devoured</h3>
         <hr>
@@ -44,6 +43,6 @@
             {{/each}}
         </ol>
     </div>
-</div>
+</div> {{!-- closing uk-grid --}}
  
 

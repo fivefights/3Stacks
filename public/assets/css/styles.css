@@ -67,6 +67,9 @@ img {
     color: white;
 }
 /* LIST ITEMS ****************************************/
+.menuCard ol, .devouredCard ol {
+    padding-left: 0;
+}
 .menuCard li, .devouredCard li {
     list-style: none;
     border: 1px solid #44ce8e;
