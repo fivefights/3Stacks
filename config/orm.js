@@ -1,4 +1,4 @@
-// require connection object
+// dependencies
 var connection = require ('./connection.js');
 
 // helper function for mysql syntax

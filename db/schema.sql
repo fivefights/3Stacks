@@ -1,9 +1,9 @@
-CREATE DATABASE omelette_db;
-USE omelette_db;
+CREATE DATABASE stacks_db;
+USE stacks_db;
 
-CREATE TABLE omelettes (
-    id AUTO_INCREMEMNT NOT NULL,
-    omelette_name VARCHAR(255) NOT NULL,
-    devoured BOOLEAN NOT NULL,
+CREATE TABLE stacks (
+    id INT AUTO_INCREMEMNT NOT NULL,
+    stacks_name VARCHAR(255) NOT NULL,
+    devoured BOOLEAN DEFAULT false,
     PRIMARY KEY(id)
 );
