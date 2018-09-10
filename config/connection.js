@@ -4,9 +4,9 @@ var mysql = require('mysql');
 // create connection
 var connection;
 
-// if (process.env.JAWSDB_URL) {
-//     connection = mysql.createConnection(process.env.JAWSDB_URL);
-// } else {
+if (process.env.JAWSDB_URL) {
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
     connection = mysql.createConnection({
         host: "127.0.0.1",
         port: 3306,
@@ -14,7 +14,7 @@ var connection;
         password: "root",
         database: "stacks_db",
     });
-// }
+}
   
   // establish connection
   connection.connect(function(err) {
