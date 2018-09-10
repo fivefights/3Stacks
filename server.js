@@ -1,54 +1,29 @@
 // dependencies
 var express = require('express');
 var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
 
-// creating instance of express
+var port = process.env.PORT || 3000;
+
 var app = express();
 
-var PORT = process.env.PORT || 8080;
+// serve static content from public folder
+app.use(express.static(process.cwd() + '/public'));
 
-app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+// override with POST having ?_method=DELETE
+app.use(methodOverride('_method'));
 
-// declaring express-handlebars dependency
-var exphbs = require("express-handlebars");
+// set view engine to handlebars
+var exphbs = require('express-handlebars');
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');
 
-var mysql = require("mysql");
+// import routes and give server access
+var routes = require('./controllers/stacks_controller.js');
 
-// creating connection
-var connection = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
-  user: "root",
-  password: "root",
-  database: "stacks_db"
-});
+app.use('/', routes);
 
-// establishing connection
-connection.connect(function(err) {
-    if (err) {
-      console.error("error connecting: " + err.stack);
-      return;
-    }
-    console.log("connected as id " + connection.threadId);
-});
-
-// routes
-app.get("/", function(req, res) {
-    connection.query("SELECT * FROM quotes;", function(err, data) {
-      if (err) {
-        return res.status(500).end();
-      }
-      res.render("index", { quotes: data });
-    });
-});
-
-// starting server
-app.listen(PORT, function() {
-    console.log("Server listening on: http://localhost:" + PORT);
-});
+app.listen(port);
