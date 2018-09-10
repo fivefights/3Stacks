@@ -6,6 +6,11 @@ body {
 h1 {
     font-family: 'Kosugi Maru', sans-serif;
     color: #144b32;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+img {
+    max-height: 50px;
     margin-top: 20px;
 }
 ::selection {
@@ -16,7 +21,7 @@ h1 {
     border-color: #144b32;
 }
 .uk-text-lead {
-    color: #f19f4d;
+    color: #E8853D;
 }
 /* BUTTONS **********************************************/
 .uk-button-default, .uk-input {
@@ -39,7 +44,7 @@ h1 {
 .uk-input {
     border-color: #144b32;
 }
-.uk-input:focus {
+.uk-input:focus, .uk-button-default:focus {
     border-color: #44ce8e;
 }
 /* CARDS *********************************************/
@@ -49,13 +54,14 @@ h1 {
 .menuCard {
     color: white;
     background-color: #144b32;
+    border: 2px solid #144b32;
 }
 .menuCard .uk-card-title, .devouredCard .uk-card-title {
     color: white;
     text-align: center;
 }
 .devouredCard {
-    background-color: #f19f4d;
+    background-color: #E8853D;
     color: white;
 }
 
