@@ -12,7 +12,8 @@ var connection;
         port: 3306,
         user: "root",
         password: "root",
-        database: "stacks_db"
+        database: "stacks_db",
+        socketPath: "/var/run/mysqld/mysqld.sock"
     });
 // }
   
