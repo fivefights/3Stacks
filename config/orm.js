@@ -31,7 +31,7 @@ var orm = {
 		// run db query
 		connection.query(queryString, function(err, result) {
 			if (err) {
-				throw err;
+				console.log(err);
 			}
 			// return result
 			cb(result);
