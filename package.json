@@ -1,7 +1,7 @@
 {
-  "name": "stacks",
+  "name": "3Stacks",
   "version": "1.0.0",
-  "description": "",
+  "description": "pancake menu and eating app built with node, express, handlebars, and mysql",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/1661SONS/3Stacks.git"
   },
-  "author": "",
+  "author": "Julia Christian",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/1661SONS/3Stacks/issues"
