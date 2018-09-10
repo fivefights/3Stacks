@@ -1,6 +1,5 @@
-INSERT INTO omelettes (omelette_name, devoured)
+INSERT INTO stacks (stacks_name, devoured)
 VALUES 
-("farmhouse omelette", true),
-("veggie omelette", false),
-("steak omelette", false),
-("egg white farmhouse omelette", true);
+("blueberry pancakes", true),
+("strawberry pancakes", false),
+("banana pancakes", false);

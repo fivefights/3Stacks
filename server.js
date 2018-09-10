@@ -22,7 +22,7 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 // import routes and give server access
-var routes = require('./controllers/stacks_controller.js');
+var routes = require('./controllers/stacks-controller.js');
 
 app.use('/', routes);
 
