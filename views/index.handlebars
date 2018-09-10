@@ -7,34 +7,41 @@
 {{!-- <iframe src="https://giphy.com/embed/3oKIPbhmYk6Y9vQlmE" width="480" height="386" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/deadsetonlife-matty-mathesson-3oKIPbhmYk6Y9vQlmE">via GIPHY</a></p> --}}
 
     <p class="uk-text-lead">add a pancake dish to the menu:</p>
-    <form class="uk-width-1-3@m uk-align-center">
+    <form class="uk-width-1-3@m uk-align-center" action="/stacks" method="POST">
         <fieldset class="uk-fieldset">
             <div>
-                <input class="uk-input" type="text">
+                <input class="uk-input" type="text" id="name" name="stacks_name">
             </div>
         </fieldset>
+        <button class="uk-button uk-button-default" type="submit"><span uk-icon="arrow-down"></span> add stacks</button>
     </form>
-    <button class="uk-button uk-button-default"><span uk-icon="arrow-down"></span> add dish</button>
 </div>
 
 <div class="uk-grid-small uk-child-width-expand@s" uk-grid>
     {{!-- menu div - left side --}}
     <div class="menuCard uk-card uk-card-body uk-width-1-2@m">
         <h3 class="uk-card-title"><span uk-icon="tag"></span> Menu</h3>
+        <p class="uk-text-center">click the <span uk-icon="bolt"></span> to devour</p>
         <hr>
         <ol>
-            <li><span uk-icon="tag"></span> farmhouse omelette</li>
-            <li><span uk-icon="tag"></span> 3 stacks</li>
+            {{#each stacks}}
+                {{#unless this.devoured}}
+                    <form action="/stacks/{{this.id}}?_method=PUT" method="POST"><li>{{this.id}}. {{this.stacks_name}} <button href="" type="submit" class="uk-icon-link" uk-icon="bolt"></button></li></form>
+                {{/unless}}
+            {{/each}}
         </ol>
     </div>
 
-    {{!-- eaten div - right side --}}
+    {{!-- devoured div - right side --}}
     <div class="devouredCard uk-card uk-card-body uk-width-1-2@m">
         <h3 class="uk-card-title"><span uk-icon="bolt"></span> Devoured</h3>
         <hr>
         <ol>
-            <li><span uk-icon="bolt"></span> farmhouse omelette</li>
-            <li><span uk-icon="bolt"></span> 3 stacks</li>
+            {{#each stacks}}
+                {{#if this.devoured}}
+                    <li>{{this.id}}. <s>{{this.stacks_name}}</s></li>
+                {{/if}}
+            {{/each}}
         </ol>
     </div>
 </div>

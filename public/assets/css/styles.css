@@ -33,7 +33,7 @@ img {
     background-color: white;
 }
 .uk-button-default {
-    margin-bottom: 30px;
+    margin-top: 30px;
     color: white;
     background-color: #144b32;
     border: 1px solid #144b32;
@@ -66,8 +66,9 @@ img {
     background-color: #E8853D;
     color: white;
 }
-/* MENU ITEMS ****************************************/
+/* LIST ITEMS ****************************************/
 .menuCard li, .devouredCard li {
+    list-style: none;
     border: 1px solid #44ce8e;
     border-style: dotted;
     border-width: 0.5px;
@@ -80,5 +81,11 @@ img {
 .devouredCard li {
     border: 1px solid #f5b97c;
     background-color: #f19f4d;
+}
+.uk-icon-link {
+    color: white;
+}
+.uk-icon-link:hover {
+    color: #E8853D;
 }
 
