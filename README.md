@@ -2,7 +2,7 @@
 
 ### Overview
 
-3 Stacks is a barely Outkast-themed Heroku app that performs CRU (create, read, and update) operations of the user's choice, but preferably with Outkast-themed pancake dishes. Users can and add a pancake dish to the SQL database and then devour it, or devour a dish that's already listed on the menu.
+3 Stacks is a barely Outkast-themed Heroku app that performs CRU (create, read, and update) operations of the user's choice, but preferably with Outkast-themed pancake dishes. Users can add a pancake dish to the SQL database menu then immediately devour it, or devour another dish already listed.
 
 [![3 Stacks Heroku App Demo](/public/assets/images/cold-default.png)](http://www.youtube.com/watch?v=DRaSVjc4eJA)
 
